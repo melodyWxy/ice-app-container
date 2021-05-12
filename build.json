@@ -1,0 +1,33 @@
+{
+  "proxy": {
+	  "/app1": {
+      "enable": false,
+      "target": "http://127.0.0.1:6001"
+    }
+  },
+  "plugins": [
+    [
+      "build-plugin-icestark",
+      {
+        "uniqueName": "frameworkJsonp"
+      }
+    ],
+    [
+      "build-plugin-fusion",
+      {
+        "themePackage": "@alifd/theme-design-pro",
+        "themeConfig": {
+          "nextPrefix": "next-icestark-"
+        }
+      }
+    ],
+    [
+      "build-plugin-moment-locales",
+      {
+        "locales": [
+          "zh-cn"
+        ]
+      }
+    ]
+  ]
+}
